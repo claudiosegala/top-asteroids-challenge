@@ -22,6 +22,21 @@ class Ship(GameObject):
         self.charge = 0
         self.score = 0
 
+    def __str__(self):
+        s = "Ship [ \n" \
+            "\tAngle: {}  \n" \
+            "\tVelocity: {}  \n"\
+            "\tCharge: {}  \n" \
+            "\tScore: {}  \n" \
+            "\tposx: {} \n" \
+            "\tposy: {} \n" \
+            "\tvelx: {} \n" \
+            "\tvely: {} \n" \
+            "\tradius: {} \n" \
+           "]\n\n"\
+
+        return s.format(self.ang % 360, self.velang, self.charge, self.score, self.posx, self.posy, self.velx, self.vely, self.radius)
+
 class Rock(GameObject):
     pass
 
